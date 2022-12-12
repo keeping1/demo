@@ -1,0 +1,70 @@
+
+## mysql serverId
+#canal.instance.mysql.slaveId = 1234
+# position info
+#canal.instance.master.address = 127.0.0.1:3306
+#canal.instance.master.journal.name =mysql-bin.000003
+#canal.instance.master.position =
+#canal.instance.master.timestamp =
+
+
+
+#canal.instance.dbUsername = canal
+#canal.instance.dbPassword = canal
+#canal.instance.defaultDatabaseName =testcanal
+#canal.instance.connectionCharset = UTF-8
+
+# table regex
+#canal.instance.filter.regex = .*\\..*
+
+#spring.application.name=demo
+spring:
+  application:
+    name: demo
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: ${NACOS_HOST:81.69.153.178:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:jiliNACOS2020}
+        group: ${NACOS_GROUP:INT_GROUP}
+        namespace: ${NACOS_NAMESPACE:nx-local}
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+#spring.rabbitmq.host=127.0.0.1
+#spring.rabbitmq.port=5672
+#spring.rabbitmq.username=guest
+#spring.rabbitmq.password=guest
+#spring.rabbitmq.listener.simple.acknowledge-mode=manual
+#spring.rabbitmq.listener.simple.prefetch=100
+#spring.rabbitmq.virtual-host=/
+
+#spring.datasource.primary.driver-class-name=com.mysql.jdbc.Driver
+#spring.datasource.primary.url=jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai
+#spring.datasource.primary.username=root
+#spring.datasource.primary.password=root
+
+#spring.datasource.second.driver-class-name=com.mysql.jdbc.Driver
+#spring.datasource.second.url=jdbc:mysql://10.99.103.7:3306/scrm_geely_aftsale?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai
+#spring.datasource.second.username=root
+#spring.datasource.second.password=2XKD@DKJ2dfjk
+
+#spring.datasource.second.driver-class-name=oracle.jdbc.OracleDriver
+#spring.datasource.second.url=jdbc:oracle:thin:@localhost:1909/xxx.xxx.com
+#spring.datasource.second.userName=springboot
+#spring.datasource.second.password=123456
+
+
+#spring.jpa.show-sql=false
+#spring.jpa.hibernate.format_sql=true
+#spring.jpa.hibernate.primary-dialect=org.hibernate.dialect.MySQL55Dialect
+#spring.jpa.hibernate.second-dialect=org.hibernate.dialect.MySQL55Dialect
+
+#wkg.dept.name=wkg
+#wkg.dept.age=19
